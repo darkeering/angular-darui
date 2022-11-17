@@ -1,0 +1,81 @@
+.out-container {
+  position: relative;
+}
+.out-container .pre {
+  left: 20px;
+}
+.out-container .pre i {
+  transform: rotate(180deg);
+}
+.out-container .next {
+  right: 20px;
+}
+.out-container .button {
+  opacity: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 8px 16px 0 rgba(37, 43, 58, 0.1);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.out-container .button i {
+  font-size: 18px;
+}
+.out-container .button:hover {
+  background-color: #f5f5f5;
+  transition: 0.3s ease-in-out;
+}
+.out-container:hover .button {
+  opacity: 1;
+}
+.out-container .dar-carousel-container {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+.out-container .dar-carousel-container .dar-carousel-wrapper {
+  display: flex;
+  position: relative;
+}
+.out-container .dar-carousel-container .dar-carousel-wrapper ::ng-deep .dar-carousel-item {
+  flex: 1;
+}
+.out-container .dar-carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+.out-container .dar-carousel-dots .dots-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.out-container .dar-carousel-dots .dots-wrapper .dot-item {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #71757f;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.out-container .dar-carousel-dots .dots-wrapper .dot-item:hover {
+  background-color: #252b3a;
+  transition: all 0.3s ease-in-out;
+}
+.out-container .dar-carousel-dots .dots-wrapper .dot-item.active {
+  background-color: #252b3a;
+  width: 24px;
+  transition: all 0.3s ease-in-out;
+}

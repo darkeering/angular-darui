@@ -1,0 +1,31 @@
+.search {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.search input {
+  padding: 4px 24px 4px 8px;
+}
+.search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.search .icon-search {
+  position: absolute;
+  font-size: 16px;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  color: #a6a9af;
+}
+.search .icon-error-o {
+  position: absolute;
+  font-size: 16px;
+  display: inline-block;
+  padding: 5px 7px;
+  cursor: pointer;
+  right: 25px;
+  font-size: 6px;
+  color: #d7d8da;
+  border-right: 1.1px solid;
+}

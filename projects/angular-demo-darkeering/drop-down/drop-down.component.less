@@ -1,0 +1,40 @@
+.darui-drop-dowm-menu {
+  padding: 4px 10px;
+  border: 1px solid #d7d8da;
+  border-radius: 4px;
+  display: flex;
+  cursor: default;
+  &:hover {
+    border-color: #9b9fa8;
+  }
+  &.open {
+    border-color: #5e7ce0;
+  }
+  .darui-drop-dowm-menu-span {
+    margin-right: 8px;
+  }
+}
+
+.pop-container {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  // max-height: 150px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px 0 rgb(37 43 58 / 20%);
+  cursor: default;
+  // display: block;
+  // position: static;
+
+  .item {
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    padding: 0 10px;
+
+    &.hover {
+      background-color: #f2f5fc;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '~@devui-design/icons/icomoon/devui-icon.css';
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+ul {
+  list-style: none;
+}
+z-button {
+  display: inline-block;
+}
+.tooltip-border-red {
+  border: #f66f6a 1.5px solid;
+}
+.tooltip-border-yellow {
+  border: #fac20a 1.5px solid;
+}
+.tooltip-border-blue {
+  border: #5e7ce0 1.5px solid;
+}
+.tooltip-border-grey {
+  border: #d7d8da 1.5px solid;
+}
+.tooltiptext-red {
+  background-color: #f66f6a;
+  color: aliceblue;
+}
+.tooltiptext-yellow {
+  background-color: #fac20a;
+  color: aliceblue;
+}
+.tooltiptext-blue {
+  background-color: #5e7ce0;
+  color: aliceblue;
+}
+.tooltiptext-grey {
+  background-color: #d7d8da;
+  color: aliceblue;
+}
+.tooltiptext {
+  position: absolute;
+  width: max-content;
+  max-width: 200px;
+  z-index: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+}
+.tooltiptext::after {
+  background: inherit;
+  border: none;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+}
+.tooltiptext-right::after {
+  transform: rotate(45deg);
+  top: 4.3px;
+  left: -4.6px;
+}
+.tooltiptext-left::after {
+  transform: rotate(45deg);
+  top: 4.3px;
+  right: -4.6px;
+}
+.tooltiptext-bottom::after {
+  transform: rotate(45deg);
+  left: 4.3px;
+  top: -4.6px;
+}
+.tooltiptext-top::after {
+  transform: rotate(45deg);
+  left: 4.3px;
+  bottom: -4.6px;
+}
+.full:fullscreen {
+  background-color: #fff;
+}
+.z-text-input {
+  border-radius: 4px;
+  padding: 4px 8px;
+  height: 32px;
+  line-height: 32px;
+  outline: none;
+  border: 1px solid #d7d8da;
+  width: 100%;
+}
+.z-text-input:hover {
+  border-color: #9b9fa8;
+}
+.z-text-input:focus {
+  border-color: #5e7ce0;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #d7d8da;
+  background-color: var(--devui-line, #d7d8da);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #babbc0;
+  background-color: var(--devui-placeholder, #babbc0);
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+em.icon-select-arrow.open {
+  transform: rotate(180deg);
+}
+em {
+  transition: 0.3s;
+}

@@ -1,0 +1,163 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "angular-demo-darkeering": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "css",
+          "skipTests": true,
+          "prefix": "z"
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true,
+          "prefix": "z",
+          "flat": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/angular-demo-darkeering",
+      "sourceRoot": "projects/angular-demo-darkeering/src",
+      "prefix": "z",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-demo-darkeering/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-demo-darkeering/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-demo-darkeering/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-demo-darkeering/src/test.ts",
+            "tsConfig": "projects/angular-demo-darkeering/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-demo-darkeering/karma.conf.js"
+          }
+        }
+      }
+    },
+    "demo-test": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less",
+          "skipTests": true,
+          "prefix": "z"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/demo-test",
+      "sourceRoot": "projects/demo-test/src",
+      "prefix": "z",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/demo-test",
+            "index": "projects/demo-test/src/index.html",
+            "main": "projects/demo-test/src/main.ts",
+            "polyfills": "projects/demo-test/src/polyfills.ts",
+            "tsConfig": "projects/demo-test/tsconfig.app.json",
+            "inlineStyleLanguage": "less",
+            "assets": [
+              "projects/demo-test/src/favicon.ico",
+              "projects/demo-test/src/assets"
+            ],
+            "styles": [
+              "projects/demo-test/src/styles.less",
+              "projects/angular-demo-darkeering/style.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/demo-test/src/environments/environment.ts",
+                  "with": "projects/demo-test/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "demo-test:build:production"
+            },
+            "development": {
+              "browserTarget": "demo-test:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "demo-test:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/demo-test/src/test.ts",
+            "polyfills": "projects/demo-test/src/polyfills.ts",
+            "tsConfig": "projects/demo-test/tsconfig.spec.json",
+            "karmaConfig": "projects/demo-test/karma.conf.js",
+            "inlineStyleLanguage": "less",
+            "assets": [
+              "projects/demo-test/src/favicon.ico",
+              "projects/demo-test/src/assets"
+            ],
+            "styles": [
+              "projects/demo-test/src/styles.less"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-demo-darkeering"
+}

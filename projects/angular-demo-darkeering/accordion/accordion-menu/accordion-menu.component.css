@@ -1,0 +1,9 @@
+.accordion-menu {
+  cursor: pointer;
+  padding: 0 20px;
+  line-height: 40px;
+  height: 40px;
+}
+.accordion-menu:hover {
+  background-color: #f2f2f3;
+}

@@ -1,0 +1,13 @@
+<div>
+  <div class="header-container" (click)="toggle()">
+    <div>
+      <em class="icon icon-select-arrow" [ngClass]="{'open': open}" ></em>
+      <ng-content select="z-panel-header"></ng-content>
+    </div>
+  </div>
+  <div class="body-contsiner" [@toggle]="open ? 'show' : 'hidden'">
+    <div class="body-inner">
+      <ng-content select="z-panel-body"></ng-content>
+    </div>
+  </div>
+</div>

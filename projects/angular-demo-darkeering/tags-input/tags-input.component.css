@@ -1,0 +1,17 @@
+.dar-tags-input-container {
+  border: 1px solid #d7d8da;
+  border-radius: 4px;
+}
+.dar-tags-input-container .dar-tags-input-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dar-tags-input-container .dar-tags-input-menu ul li {
+  margin: 4px 0 0 4px;
+}
+.dar-tags-input-container .dar-tags-input-add input {
+  outline: none;
+  border: none;
+  height: 26px;
+  line-height: 26px;
+}

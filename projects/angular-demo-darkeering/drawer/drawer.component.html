@@ -1,0 +1,14 @@
+<div class="darui-drawer">
+  <div
+    class="dar-drawer-backbg"
+    (click)="hide()"
+    [@backbgFadeInOut]="isOpen ? 'in' : 'void'"
+  ></div>
+  <div
+    class="darui-drawer-container"
+    [@flyInOut]="isOpen ? 'in' : 'void'"
+    (@flyInOut.done)="aimationDone()"
+  >
+    <div class="darui-drawer-content">this is name</div>
+  </div>
+</div>

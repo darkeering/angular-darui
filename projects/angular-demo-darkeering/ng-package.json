@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/angular-demo-darkeering",
+  "lib": {
+    "entryFile": "./index.ts"
+  },
+  "allowedNonPeerDependencies": [
+    "@angular/cdk"
+  ]
+}

@@ -1,0 +1,32 @@
+<ng-container>
+  <ng-template
+    cdk-connected-overlay
+    [cdkConnectedOverlayOrigin]="origin"
+    [cdkConnectedOverlayOpen]="isOpen"
+    [cdkConnectedOverlayWidth]="width"
+  >
+    <ng-template [ngTemplateOutlet]="popTpl"> </ng-template>
+  </ng-template>
+</ng-container>
+
+<ng-template #popTpl>
+  <div
+    class="pop-container"
+    [@toggle]="isOpen ? 'show' : 'void'"
+  >
+    <ul *ngIf="source | filter: inputCode as filterSource">
+      <ng-container *ngFor="let item of filterSource">
+        <li class="item" (click)="selectValue(item, $event)">
+          <span class="item-content">
+            {{ item.name }}
+          </span>
+        </li>
+      </ng-container>
+      <ng-container *ngIf="!filterSource.length">
+        <li class="item">
+          <span class="item-content"> 没有数据 </span>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</ng-template>

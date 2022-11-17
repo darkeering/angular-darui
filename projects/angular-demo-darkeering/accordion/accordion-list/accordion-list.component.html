@@ -1,0 +1,11 @@
+<ul class="accordion-list-ul">
+  <li *ngFor="let item of data">
+    <ng-container *ngIf="!item.children">
+      <z-accordion-item [data]="item"></z-accordion-item>
+    </ng-container>
+    <ng-container *ngIf="item.children">
+      <z-accordion-menu [data]="item"></z-accordion-menu>
+      <z-accordion-list [data]="item.children" [@toggle]="item.open ? 'show': 'hidden'"></z-accordion-list>
+    </ng-container>
+  </li>
+</ul>

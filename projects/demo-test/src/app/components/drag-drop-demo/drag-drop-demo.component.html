@@ -1,0 +1,23 @@
+<div class="out-container">
+  <div class="in-container">
+    <div>Draggable Item</div>
+    <div>
+      <ul>
+        <li
+          *ngFor="let l1 of list1"
+          zDraggable
+        >
+          {{ l1 }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="in-container">
+    <div>Drop Area With Sortable Function</div>
+    <div>
+      <ul zDroppable (dropEvent)="drop($event)">
+        <li *ngFor="let l2 of list2">{{ l2 }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

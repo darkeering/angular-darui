@@ -1,0 +1,38 @@
+<div
+  class="darui-drop-dowm-menu"
+  [ngClass]="{ open: isOpen }"
+  (click)="toggle()"
+  #dropDown
+>
+  <span class="darui-drop-dowm-menu-span">more</span>
+  <em class="icon icon-select-arrow" [ngClass]="{ open: isOpen }"></em>
+</div>
+
+<ng-template
+  cdk-connected-overlay
+  [cdkConnectedOverlayOrigin]="dropDown"
+  [cdkConnectedOverlayOpen]="isOpen"
+>
+  <ng-template [ngTemplateOutlet]="popTpl"> </ng-template>
+</ng-template>
+
+<ng-template #popTpl>
+  <div class="pop-container" [@toggle]="isOpen ? 'show' : 'void'">
+    <ul>
+      <ng-container *ngIf="source.length">
+        <ng-container *ngFor="let item of source; let index = index">
+          <li class="item" [ngClass]="{ hover: index === hoverIndex }" (zHoverIndex)="setHoverIndex($event, index)" (click)="selectItem(item)">
+            <span class="item-content">
+              {{ item.name }}
+            </span>
+          </li>
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="!source.length">
+        <li class="item">
+          <span class="item-content"> 没有数据 </span>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</ng-template>

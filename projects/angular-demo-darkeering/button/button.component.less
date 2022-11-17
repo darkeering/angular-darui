@@ -1,0 +1,25 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 32px;
+  height: 32px;
+  min-width: 64px;
+  border-radius: 4px;
+  padding: 0 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #5e7ce0;
+  color: #fff;
+  &:hover {
+    background-color: #7693f5;
+  }
+  &:disabled {
+    background-color: #beccfa;
+    cursor: not-allowed;
+  }
+  transition: background-color .3s;
+}

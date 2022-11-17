@@ -1,0 +1,22 @@
+.out-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.out-container .in-container {
+  background-color: #ffffff;
+  border: #f2f2f3 1px solid;
+  padding: 10px;
+  margin-left: 10px;
+}
+.out-container .in-container ul {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+}
+.out-container .in-container ul li {
+  margin-top: 10px;
+  background-color: #5e7ce0;
+  padding: 10px;
+  color: #ffffff;
+}

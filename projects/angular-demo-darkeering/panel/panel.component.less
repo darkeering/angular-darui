@@ -1,0 +1,24 @@
+:host ::ng-deep {
+  .header-container {
+    background-color: #f2f5fc;
+    padding: 12px 20px;
+  }
+  .body-contsiner {
+    background-color: #f2f5fc;
+    display: flex;
+    line-height: 1.5;
+    &::before {
+      content: "";
+      width: 30px;
+      display: block;
+    }
+    .body-inner {
+      background-color: #fff;
+      padding: 20px;
+      flex: 1;
+      border-left: 2px solid #5e7ce0;
+
+    }
+  }
+}
+

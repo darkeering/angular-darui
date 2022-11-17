@@ -1,0 +1,18 @@
+.pop-container {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  max-height: 150px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px 0 rgba(37, 43, 58, 0.2);
+}
+.pop-container .item {
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.pop-container .item:hover {
+  background-color: #f2f5fc;
+}
