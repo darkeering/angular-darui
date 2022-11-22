@@ -23,6 +23,7 @@ export class AccordionItemComponent implements OnInit {
   }
 
   itemClick() {
+    this.data.active = true
     this.accordionService.itemClick(this.data)
   }
 

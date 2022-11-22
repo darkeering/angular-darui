@@ -13,6 +13,7 @@ import { SearchModule } from "./search";
 import { TagsModule } from "./tags";
 import { TextInputModule } from "./text-input";
 import { TooltipModule } from "./tooltip";
+import { IconsModule } from "./icons";
 export * from './accordion'
 export * from './auto-complete'
 export * from './button'
@@ -27,6 +28,7 @@ export * from './carousel'
 export * from './tags'
 export * from './drop-down'
 export * from './drawer'
+export * from './icons'
 
 
 @NgModule({
@@ -44,7 +46,8 @@ export * from './drawer'
     CarouselModule,
     TagsModule,
     DropDownModule,
-    DrawerModule
+    DrawerModule,
+    IconsModule
   ],
   declarations: [
   ]

@@ -1,0 +1,7 @@
+export * from './icons.module'
+export * from './check-outlined/check-outlined.component'
+export * from './close-outlined/close-outlined.component'
+export * from './down-outlined/down-outlined.component'
+export * from './left-outlined/left-outlined.component'
+export * from './right-outlined/right-outlined.component'
+export * from './up-outlined/up-outlined.component'

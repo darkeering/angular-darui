@@ -1,3 +1,3 @@
-<div #accordionItem class="accordion-item" (click)="itemClick()">
+<div #accordionItem class="accordion-item" [ngClass]="{active: data.active}" (click)="itemClick()">
   {{data.title}}
 </div>

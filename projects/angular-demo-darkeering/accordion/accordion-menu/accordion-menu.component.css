@@ -3,7 +3,18 @@
   padding: 0 20px;
   line-height: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .accordion-menu:hover {
   background-color: #f2f2f3;
+}
+.accordion-menu span {
+  width: 16px;
+  height: 16px;
+  transition: all 0.25s ease-in-out;
+}
+.accordion-menu span.open {
+  transform: rotate(90deg);
 }

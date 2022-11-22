@@ -5,6 +5,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { UtilsModule } from '../utils/utils.module';
+import { IconsModule } from '../icons';
 
 
 
@@ -17,7 +18,8 @@ import { UtilsModule } from '../utils/utils.module';
     OverlayModule,
     BrowserAnimationsModule,
     BrowserModule,
-    UtilsModule
+    UtilsModule,
+    IconsModule
   ],
   exports: [
     DropDownComponent

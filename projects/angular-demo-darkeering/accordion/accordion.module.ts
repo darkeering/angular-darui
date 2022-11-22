@@ -4,6 +4,7 @@ import { AccordionListComponent } from './accordion-list/accordion-list.componen
 import { AccordionMenuComponent } from './accordion-menu/accordion-menu.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { IconsModule } from '../icons';
 
 
 
@@ -15,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     AccordionItemComponent
   ],
   imports: [
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    IconsModule
   ],
   exports: [
     AccordionComponent,

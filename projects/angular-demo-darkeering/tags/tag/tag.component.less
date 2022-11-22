@@ -2,7 +2,7 @@
   border: 1px solid #0b81f6;
   border-radius: 4px;
   padding-left: 8px;
-  padding-right: 32px;
+  padding-right: 4px;
   color: #0b81f6;
   position: relative;
   display: flex;
@@ -10,18 +10,15 @@
 
   .dar-tag-inner {
     display: flex;
-    span {
+    .dar-tag-name {
       font-size: 12px;
+      margin-right: 5px;
     }
-    svg {
-      width: 14px;
-      height: 14px;
-      position: absolute;
-      right: 8px;
-      font-size: 12px;
-      top: 50%;
-      transform: translateY(-46%);
-      cursor: pointer;
+    .dar-tag-close-icon {
+      width: 12px;
+      height: 12px;
+      align-self: center;
+      justify-self: flex-end;
     }
   }
 }

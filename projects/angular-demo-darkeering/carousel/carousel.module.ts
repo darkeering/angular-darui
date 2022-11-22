@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselComponent } from './carousel.component';
 import { CarouselItemComponent } from './carousel-item.component';
+import { IconsModule } from '../icons';
 
 
 
@@ -11,7 +12,8 @@ import { CarouselItemComponent } from './carousel-item.component';
     CarouselItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IconsModule
   ],
   exports: [
     CarouselComponent,

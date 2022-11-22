@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TagsComponent } from './tags.component';
 import { TagComponent } from './tag/tag.component';
+import { IconsModule } from '../icons';
 
 
 
@@ -11,7 +12,8 @@ import { TagComponent } from './tag/tag.component';
     TagComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    IconsModule
   ],
   exports: [
     TagsComponent,

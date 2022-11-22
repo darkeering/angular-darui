@@ -28,8 +28,9 @@
   transition: 0.3s ease-in-out;
   z-index: 1;
 }
-.out-container .button i {
-  font-size: 18px;
+.out-container .button .darui-icon {
+  width: 18px;
+  height: 18px;
 }
 .out-container .button:hover {
   background-color: #f5f5f5;

@@ -17,7 +17,7 @@ export class AccordionComponent implements OnInit {
   ) {
     this.accordionService._itemData.subscribe((item: any) => {
       console.log('item', item);
-      
+      this.setActive(this.data, item)
       this.itemClickEvent.emit(item)
     })
   }
@@ -29,8 +29,21 @@ export class AccordionComponent implements OnInit {
   initData(data: any, level: number) {
     data.forEach((item: any) => {
       item['level'] = level
-      if(item.children) {
+      item['active'] = !!item.active
+      if (item.children) {
         this.initData(item.children, level + 1)
+      }
+    })
+  }
+
+  setActive(data: any, clickItem: any) {
+    data.forEach((item: any) => {
+      item['active'] = false
+      if (item.title === clickItem.title) {
+        item['active'] = true
+      }
+      if (item.children) {
+        this.setActive(item.children, clickItem)
       }
     })
   }

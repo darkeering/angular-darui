@@ -1,18 +1,29 @@
 <div class="out-container">
-
-  <div class="pre button" (click)="pre()" ><i class="icon icon-code-editor-flod"></i></div>
-  <div class="next button" (click)="next()" ><i class="icon icon-code-editor-flod"></i></div>
-
-<div class="dar-carousel-container">
-  <div class="dar-carousel-wrapper" #wrapper>
-
-    <ng-content select="z-carousel-item"></ng-content>
+  <div class="pre button" (click)="pre()">
+    <span class="darui-icon">
+      <z-left-outlined></z-left-outlined>
+    </span>
   </div>
-</div>
+  <div class="next button" (click)="next()">
+    <span class="darui-icon">
+      <z-right-outlined></z-right-outlined>
+    </span>
+  </div>
 
-<div class="dar-carousel-dots">
-  <ul class="dots-wrapper" *ngIf="items.length > 0">
-    <li class="dot-item" [ngClass]="{active: activeIndex === index}" *ngFor="let item of items;let index = index" (click)="switchStep(index)"></li>
-  </ul>
-</div>
+  <div class="dar-carousel-container">
+    <div class="dar-carousel-wrapper" #wrapper>
+      <ng-content select="z-carousel-item"></ng-content>
+    </div>
+  </div>
+
+  <div class="dar-carousel-dots">
+    <ul class="dots-wrapper" *ngIf="items.length > 0">
+      <li
+        class="dot-item"
+        [ngClass]="{ active: activeIndex === index }"
+        *ngFor="let item of items; let index = index"
+        (click)="switchStep(index)"
+      ></li>
+    </ul>
+  </div>
 </div>

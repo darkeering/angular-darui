@@ -4,6 +4,7 @@
   border-radius: 4px;
   display: flex;
   cursor: default;
+  align-items: center;
 }
 .darui-drop-dowm-menu:hover {
   border-color: #9b9fa8;
@@ -13,6 +14,14 @@
 }
 .darui-drop-dowm-menu .darui-drop-dowm-menu-span {
   margin-right: 8px;
+}
+.darui-drop-dowm-menu .darui-drop-dowm-icon {
+  width: 12px;
+  height: 12px;
+  transition: all 0.25s ease-in-out;
+}
+.darui-drop-dowm-menu .darui-drop-dowm-icon.open {
+  transform: rotate(180deg);
 }
 .pop-container {
   width: 100%;

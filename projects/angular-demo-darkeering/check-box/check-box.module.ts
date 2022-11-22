@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CheckBoxComponent } from './check-box.component';
+import { IconsModule } from '../icons';
 
 
 
@@ -9,7 +10,8 @@ import { CheckBoxComponent } from './check-box.component';
     CheckBoxComponent
   ],
   imports: [
-    CommonModule,
+  CommonModule,
+  IconsModule
   ],
   exports: [
     CheckBoxComponent
