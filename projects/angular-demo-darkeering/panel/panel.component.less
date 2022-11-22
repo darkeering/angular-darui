@@ -2,16 +2,35 @@
   .header-container {
     background-color: #f2f5fc;
     padding: 12px 20px;
+
+    .darui-panel-header {
+      display: flex;
+      align-items: center;
+
+      .darui-panel-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        transition: all 0.25s ease-in-out;
+
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
+
   .body-contsiner {
     background-color: #f2f5fc;
     display: flex;
     line-height: 1.5;
+
     &::before {
       content: "";
       width: 30px;
       display: block;
     }
+
     .body-inner {
       background-color: #fff;
       padding: 20px;
@@ -21,4 +40,3 @@
     }
   }
 }
-

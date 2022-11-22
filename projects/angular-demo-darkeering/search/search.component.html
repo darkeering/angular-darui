@@ -10,6 +10,11 @@
     id="search"
     placeholder="Please Enter"
   />
-  <i *ngIf="searchText !== ''" class="icon icon-error-o" (click)="cancle()"></i>
-  <i class="icon icon-search" (click)="searchClick()"></i>
+  <!-- <i *ngIf="searchText !== ''" class="icon icon-error-o" (click)="cancle()"></i> -->
+  <span class="darui-cancle-icon" *ngIf="searchText !== ''" (click)="cancle()">
+    <z-close-circle-filled></z-close-circle-filled>
+  </span>
+  <span class="darui-search-icon">
+    <z-search-outlined></z-search-outlined>
+  </span>
 </div>

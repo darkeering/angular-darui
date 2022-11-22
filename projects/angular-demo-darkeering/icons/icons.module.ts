@@ -6,6 +6,8 @@ import { RightOutlined } from './right-outlined/right-outlined.component';
 import { CloseOutlined } from './close-outlined/close-outlined.component';
 import { DownOutlined } from './down-outlined/down-outlined.component';
 import { UpOutlined } from './up-outlined/up-outlined.component';
+import { SearchOutlined } from './search-outlined/search-outlined.component';
+import { CloseCircleFilled } from './close-circle-filled/close-circle-filled.component';
 
 const components = [
   CheckOutlined,
@@ -13,7 +15,9 @@ const components = [
   RightOutlined,
   CloseOutlined,
   DownOutlined,
-  UpOutlined
+  UpOutlined,
+  SearchOutlined,
+  CloseCircleFilled
 ]
 
 @NgModule({

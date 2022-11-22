@@ -2,6 +2,19 @@
   background-color: #f2f5fc;
   padding: 12px 20px;
 }
+:host ::ng-deep .header-container .darui-panel-header {
+  display: flex;
+  align-items: center;
+}
+:host ::ng-deep .header-container .darui-panel-header .darui-panel-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  transition: all 0.25s ease-in-out;
+}
+:host ::ng-deep .header-container .darui-panel-header .darui-panel-icon.open {
+  transform: rotate(180deg);
+}
 :host ::ng-deep .body-contsiner {
   background-color: #f2f5fc;
   display: flex;
