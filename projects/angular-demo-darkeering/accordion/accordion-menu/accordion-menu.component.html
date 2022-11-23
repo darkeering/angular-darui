@@ -1,6 +1,4 @@
 <div #accordionMenu class="accordion-menu" (click)="toggle()">
-  {{data.title}}
-  <span [ngClass]="{open: data.open}">
-    <z-right-outlined></z-right-outlined>
-  </span>
+  {{ data.title }}
+  <i zRightOutlined class="dar-acc-menu-icon" [ngClass]="{ open: data.open }"></i>
 </div>

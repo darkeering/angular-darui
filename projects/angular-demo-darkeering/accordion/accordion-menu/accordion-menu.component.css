@@ -10,11 +10,10 @@
 .accordion-menu:hover {
   background-color: #f2f2f3;
 }
-.accordion-menu span {
-  width: 16px;
-  height: 16px;
+.accordion-menu .dar-acc-menu-icon {
+  font-size: 16px;
   transition: all 0.25s ease-in-out;
 }
-.accordion-menu span.open {
+.accordion-menu .dar-acc-menu-icon.open {
   transform: rotate(90deg);
 }

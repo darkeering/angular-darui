@@ -4,9 +4,6 @@
 .out-container .pre {
   left: 20px;
 }
-.out-container .pre i {
-  transform: rotate(180deg);
-}
 .out-container .next {
   right: 20px;
 }
@@ -29,8 +26,7 @@
   z-index: 1;
 }
 .out-container .button .darui-icon {
-  width: 18px;
-  height: 18px;
+  font-size: 18px;
 }
 .out-container .button:hover {
   background-color: #f5f5f5;

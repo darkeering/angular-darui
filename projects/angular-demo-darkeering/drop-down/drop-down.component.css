@@ -16,8 +16,7 @@
   margin-right: 8px;
 }
 .darui-drop-dowm-menu .darui-drop-dowm-icon {
-  width: 12px;
-  height: 12px;
+  font-size: 12px;
   transition: all 0.25s ease-in-out;
 }
 .darui-drop-dowm-menu .darui-drop-dowm-icon.open {

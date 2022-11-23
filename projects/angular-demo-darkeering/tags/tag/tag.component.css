@@ -16,8 +16,8 @@
   margin-right: 5px;
 }
 .dar-tag-container .dar-tag-inner .dar-tag-close-icon {
-  width: 12px;
-  height: 12px;
+  color: #0b81f6;
+  font-size: 12px;
   align-self: center;
   justify-self: flex-end;
 }

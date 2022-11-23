@@ -2,9 +2,7 @@
   <div class="header-container" (click)="toggle()">
     <div class="darui-panel-header">
       <!-- <em class="icon icon-select-arrow" [ngClass]="{'open': open}" ></em> -->
-      <span class="darui-panel-icon" [ngClass]="{ open: open }">
-        <z-up-outlined></z-up-outlined>
-      </span>
+      <i zUpOutlined class="darui-panel-icon" [ngClass]="{ open: open }"></i>
       <ng-content select="z-panel-header"></ng-content>
     </div>
   </div>

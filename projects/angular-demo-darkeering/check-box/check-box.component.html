@@ -1,9 +1,7 @@
-<div class="darui-checkbox" [ngClass]="{ 'active': checked }">
+<div class="darui-checkbox" [ngClass]="{ active: checked }">
   <label class="darui-checkbox-label" (click)="toggle()">
     <input type="checkbox" id="" (click)="$event.stopPropagation()" />
-    <span class="darui-checkbox-material">
-        <z-check-outlined></z-check-outlined>
-    </span>
+    <i zCheckOutlined class="darui-checkbox-material"></i>
     {{ label }}
   </label>
 </div>
