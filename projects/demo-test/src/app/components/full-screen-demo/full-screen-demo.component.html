@@ -1,12 +1,22 @@
-<z-fullscreen>
+<z-fullscreen (fullscreenLaunch)="toggleFullScreen1($event)">
   <div class="full" zFullscreenTarget>
-    <p>hhhh</p>
-    <div zFullscreenLaunch>launch</div>
+    <h3>111122223333</h3>
+    <h3>111122223333</h3>
+    <h3>111122223333</h3>
+    <h3>111122223333</h3>
+    <h3>111122223333</h3>
+    <h3>111122223333</h3>
+    <z-button zFullscreenLaunch>{{ isFull1 ? "退出" : "全屏" }}</z-button>
   </div>
 </z-fullscreen>
-<z-fullscreen>
+<z-fullscreen (fullscreenLaunch)="toggleFullScreen2($event)">
   <div class="full" zFullscreenTarget>
-    <p>aaa</p>
-    <div zFullscreenLaunch>launch</div>
+    <h3>444555666</h3>
+    <h3>444555666</h3>
+    <h3>444555666</h3>
+    <h3>444555666</h3>
+    <h3>444555666</h3>
+    <h3>444555666</h3>
+    <z-button zFullscreenLaunch>{{ isFull2 ? "退出" : "全屏" }}</z-button>
   </div>
 </z-fullscreen>

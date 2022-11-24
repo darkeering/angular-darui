@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { DragDropService } from 'projects/angular-demo-darkeering/drag-drop';
+import { DragDropService } from 'projects/ng-darui/drag-drop';
 
 @Component({
   selector: 'lib-drag-drop-demo',

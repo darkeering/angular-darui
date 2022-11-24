@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DrawerService } from 'projects/angular-demo-darkeering';
+import { DrawerService } from 'projects/ng-darui';
 
 @Component({
   selector: 'z-drawer-demo',

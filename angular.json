@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-demo-darkeering": {
+    "ng-darui": {
       "projectType": "library",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,21 +23,21 @@
           "skipTests": true
         }
       },
-      "root": "projects/angular-demo-darkeering",
-      "sourceRoot": "projects/angular-demo-darkeering/src",
+      "root": "projects/ng-darui",
+      "sourceRoot": "projects/ng-darui/src",
       "prefix": "z",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/angular-demo-darkeering/ng-package.json"
+            "project": "projects/ng-darui/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/angular-demo-darkeering/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-darui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/angular-demo-darkeering/tsconfig.lib.json"
+              "tsConfig": "projects/ng-darui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -45,9 +45,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/angular-demo-darkeering/src/test.ts",
-            "tsConfig": "projects/angular-demo-darkeering/tsconfig.spec.json",
-            "karmaConfig": "projects/angular-demo-darkeering/karma.conf.js"
+            "main": "projects/ng-darui/src/test.ts",
+            "tsConfig": "projects/ng-darui/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-darui/karma.conf.js"
           }
         }
       }
@@ -83,7 +83,7 @@
             ],
             "styles": [
               "projects/demo-test/src/styles.less",
-              "projects/angular-demo-darkeering/style.css"
+              "projects/ng-darui/style.css"
             ],
             "scripts": []
           },
@@ -159,5 +159,5 @@
       }
     }
   },
-  "defaultProject": "angular-demo-darkeering"
+  "defaultProject": "ng-darui"
 }

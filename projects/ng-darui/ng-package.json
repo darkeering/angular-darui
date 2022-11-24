@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/angular-demo-darkeering",
+  "dest": "../../dist/ng-darui",
   "lib": {
     "entryFile": "./index.ts"
   },

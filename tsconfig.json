@@ -3,9 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "angular-demo-darkeering": [
-        "dist/angular-demo-darkeering/angular-demo-darkeering",
-        "dist/angular-demo-darkeering"
+      "ng-darui": [
+        "dist/ng-darui/ng-darui",
+        "dist/ng-darui"
       ]
     },
     "baseUrl": "./",

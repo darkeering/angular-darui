@@ -16,8 +16,12 @@ export class FullscreenLaunchDirective implements OnInit {
   }
 
   @HostListener('click') onClick() {
-    this.fullScreen = !this.fullScreen
-    this.fullScreenService.setIsFullScreen(this.fullScreen)
-  }
+    const isFull = this.fullScreenService.isFull
+    if (isFull) {
+      this.fullScreenService.toggleFullScreen(false)
+    } else {
+      this.fullScreenService.toggleFullScreen(true)
 
+    }
+  }
 }

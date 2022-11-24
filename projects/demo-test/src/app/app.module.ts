@@ -13,9 +13,9 @@ import { CheckBoxDemoComponent } from './components/check-box-demo/check-box-dem
 import { FormsModule } from '@angular/forms';
 import { CarouselDemoComponent } from './components/carousel-demo/carousel-demo.component';
 import { TagsDemoComponent } from './components/tags-demo/tags-demo.component';
-import { IconsModule, DropDownModule, AccordionModule, ButtonModule, DragDropModule, FullScreenModule, TextInputModule, PanelModule, SearchModule, CheckBoxModule, CarouselModule, TagsModule, TooltipModule, AutoCompleteModule, DrawerModule, DrawerService } from 'projects/angular-demo-darkeering';
+import { IconsModule, DropDownModule, AccordionModule, ButtonModule, DragDropModule, FullScreenModule, TextInputModule, PanelModule, SearchModule, CheckBoxModule, CarouselModule, TagsModule, TooltipModule, AutoCompleteModule, DrawerModule, DrawerService } from 'projects/ng-darui';
 import { TagsInputDemoComponent } from './components/tags-input-demo/tags-input-demo.component';
-import { TagsInputModule } from 'projects/angular-demo-darkeering/tags-input/tags-input.module';
+import { TagsInputModule } from 'projects/ng-darui/tags-input/tags-input.module';
 import { DropDownDemoComponent } from './components/drop-down-demo/drop-down-demo.component';
 import { DrawerDemoComponent } from './components/drawer-demo/drawer-demo.component';
 
