@@ -1,0 +1,7 @@
+<z-table [colsConfig]="colsConfig" [data]="data"></z-table>
+
+<ng-template #action let-rowData>
+  <z-button>Edit {{rowData.name}}</z-button>
+  {{ " " }}
+  <z-button>Delete</z-button>
+</ng-template>

@@ -15,6 +15,7 @@ import { TextInputModule } from "./text-input";
 import { TooltipModule } from "./tooltip";
 import { IconsModule } from "./icons";
 import { TagsInputModule } from "./tags-input";
+import { TableModule } from './table';
 export * from './accordion'
 export * from './auto-complete'
 export * from './button'
@@ -31,6 +32,7 @@ export * from './drop-down'
 export * from './drawer'
 export * from './icons'
 export * from './tags-input'
+export * from './table'
 
 
 @NgModule({
@@ -50,7 +52,8 @@ export * from './tags-input'
     DropDownModule,
     DrawerModule,
     IconsModule,
-    TagsInputModule
+    TagsInputModule,
+    TableModule
   ],
   declarations: [
   ]

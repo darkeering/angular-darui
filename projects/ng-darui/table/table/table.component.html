@@ -1,0 +1,23 @@
+<table class="dar-table">
+  <thead class="dar-thead">
+    <tr class="dar-thead-tr">
+      <ng-container *ngFor="let col of colsConfig">
+        <th class="dar-thead-th">{{ col.title }}</th>
+      </ng-container>
+    </tr>
+  </thead>
+  <tbody class="dar-tbody">
+    <ng-container *ngFor="let rowData of data">
+      <tr class="dar-tbody-tr">
+        <ng-container *ngFor="let col of colsConfig">
+          <td class="dar-tbody-td" *ngIf="!col.render">
+            {{ rowData[col.key] }}
+          </td>
+          <td class="dar-tbody-td" *ngIf="col.render">
+            <ng-container *ngTemplateOutlet="col.render;context:{$implicit: rowData}"></ng-container>
+          </td>
+        </ng-container>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

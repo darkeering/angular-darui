@@ -1,0 +1,38 @@
+.dar-table {
+  table-layout: auto;
+  border-spacing: 0;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  background-color: #fff;
+}
+.dar-thead-th {
+  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 600;
+  text-align: start;
+  padding: 16px;
+  background: #fafafa;
+  position: relative;
+}
+.dar-thead-th:not(:last-child)::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: " ";
+  display: inline-block;
+  width: 1px;
+  height: 1.6rem;
+  background-color: rgba(5, 5, 5, 0.06);
+}
+.dar-tbody-tr {
+  transition: all 0.25s ease-in-out;
+}
+.dar-tbody-tr:hover {
+  background-color: #fafafa;
+}
+.dar-tbody-td {
+  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+  padding: 16px;
+}
