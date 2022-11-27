@@ -23,7 +23,7 @@ z-button {
 }
 
 .tooltip-border-red {
-  border: #f66f6a 1.5px solid;
+  border: var(--dar-danger) 1.5px solid;
 }
 
 .tooltip-border-yellow {
@@ -113,7 +113,7 @@ z-button {
 
 .full {
   &:fullscreen {
-    background-color: #fff;
+    background-color: var(--dar-global-bg);
   }
 }
 
@@ -123,15 +123,17 @@ z-button {
   height: 32px;
   line-height: 32px;
   outline: none;
-  border: 1px solid #d7d8da;
+  border: 1px solid var(--dar-form-control-line);
   width: 100%;
+  color: var(--dar-text);
+  background-color: var(--dar-base-bg);
 
   &:hover {
-    border-color: #9b9fa8;
+    border-color: var(--dar-form-control-line-hover);
   }
 
   &:focus {
-    border-color: rgb(94, 124, 224);
+    border-color: var(--dar-form-control-line-active);
   }
 }
 

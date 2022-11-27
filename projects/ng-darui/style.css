@@ -19,7 +19,7 @@ z-button {
   display: inline-block;
 }
 .tooltip-border-red {
-  border: #f66f6a 1.5px solid;
+  border: var(--dar-danger) 1.5px solid;
 }
 .tooltip-border-yellow {
   border: #fac20a 1.5px solid;
@@ -86,7 +86,7 @@ z-button {
   bottom: -4.6px;
 }
 .full:fullscreen {
-  background-color: #fff;
+  background-color: var(--dar-global-bg);
 }
 .z-text-input {
   border-radius: 4px;
@@ -94,14 +94,16 @@ z-button {
   height: 32px;
   line-height: 32px;
   outline: none;
-  border: 1px solid #d7d8da;
+  border: 1px solid var(--dar-form-control-line);
   width: 100%;
+  color: var(--dar-text);
+  background-color: var(--dar-base-bg);
 }
 .z-text-input:hover {
-  border-color: #9b9fa8;
+  border-color: var(--dar-form-control-line-hover);
 }
 .z-text-input:focus {
-  border-color: #5e7ce0;
+  border-color: var(--dar-form-control-line-active);
 }
 ::-webkit-scrollbar {
   width: 8px;

@@ -12,13 +12,18 @@
 }
 
 .primary {
-  background-color: #5e7ce0;
+  background-color: var(--dar-primary);
   color: #fff;
   &:hover {
-    background-color: #7693f5;
+    background-color: var(--dar-primary-5);
+  }
+  &:active {
+    background-color: var(--dar-primary-7);
   }
   &:disabled {
-    background-color: #beccfa;
+    border: 1px solid var(--dar-disabled-border);
+    background-color: var(--dar-disabled-bg);
+    color: var(--dar-disabled-color);
     cursor: not-allowed;
   }
   transition: background-color .3s;

@@ -4,15 +4,15 @@
   width: 100%;
   color: rgba(0, 0, 0, 0.88);
   font-size: 14px;
-  background-color: #fff;
+  color: var(--dar-text);
 }
 .dar-thead-th {
-  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
-  color: rgba(0, 0, 0, 0.88);
+  border-bottom: 1px solid var(--dar-tabel-border);
+  color: var(--dar-tabel-header-text);
   font-weight: 600;
   text-align: start;
   padding: 16px;
-  background: #fafafa;
+  background: var(--dar-tabel-header-bg);
   position: relative;
 }
 .dar-thead-th:not(:last-child)::after {
@@ -24,15 +24,16 @@
   display: inline-block;
   width: 1px;
   height: 1.6rem;
-  background-color: rgba(5, 5, 5, 0.06);
+  background-color: var(--dar-tabel-border);
 }
 .dar-tbody-tr {
+  background-color: var(--dar-tabel-body-bg);
   transition: all 0.25s ease-in-out;
 }
 .dar-tbody-tr:hover {
-  background-color: #fafafa;
+  background-color: var(--dar-tabel-header-bg);
 }
 .dar-tbody-td {
-  border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+  border-bottom: 1px solid var(--dar-tabel-border);
   padding: 16px;
 }

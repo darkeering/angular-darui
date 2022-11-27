@@ -1,8 +1,9 @@
 .accordion-outcontainer {
   width: 250px;
   display: flex;
-  background-color: #fff;
+  background-color: var(--dar-base-bg);
+  color: var(--dar-text);
   border-radius: 4px;
-  box-shadow: 0 1px 4px 0 rgba(37, 43, 58, 0.2);
+  box-shadow: 0 1px 4px 0 var(--dar--popup-shadow);
   padding: 8px 0;
 }

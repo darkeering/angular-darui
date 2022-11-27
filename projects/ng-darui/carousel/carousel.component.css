@@ -1,39 +1,37 @@
 .out-container {
   position: relative;
 }
-.out-container .pre {
-  left: 20px;
-}
-.out-container .next {
-  right: 20px;
-}
-.out-container .button {
-  opacity: 0;
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  background-color: #fefefe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.out-container .dar-carousel-quick {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-shadow: 0 8px 16px 0 rgba(37, 43, 58, 0.1);
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+  color: var(--dar-text);
+  background-color: transparent;
+  transition: all 0.25s ease-in-out;
   z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 40%;
 }
-.out-container .button .darui-icon {
-  font-size: 18px;
+.out-container .dar-carousel-pre:hover .dar-carousel-pre-icon {
+  transform: scale(2);
 }
-.out-container .button:hover {
-  background-color: #f5f5f5;
-  transition: 0.3s ease-in-out;
+.out-container .dar-carousel-pre-icon {
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  left: 20px;
+  transform: scale(0);
 }
-.out-container:hover .button {
-  opacity: 1;
+.out-container .dar-carousel-next {
+  right: 0;
+}
+.out-container .dar-carousel-next:hover .dar-carousel-next-icon {
+  transform: scale(2);
+}
+.out-container .dar-carousel-next-icon {
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  right: 20px;
+  transform: scale(0);
 }
 .out-container .dar-carousel-container {
   height: 200px;
@@ -47,32 +45,33 @@
 .out-container .dar-carousel-container .dar-carousel-wrapper ::ng-deep .dar-carousel-item {
   flex: 1;
 }
-.out-container .dar-carousel-dots {
+.out-container .dots-wrapper {
+  display: flex;
   position: absolute;
   bottom: 10px;
   left: 50%;
-  z-index: 1;
   transform: translateX(-50%);
 }
-.out-container .dar-carousel-dots .dots-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.out-container .dar-carousel-dots .dots-wrapper .dot-item {
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: #71757f;
-  margin-right: 8px;
+.out-container .dar-carousel-dot {
+  width: 16px;
+  height: 3px;
+  border-radius: 100px;
+  background-color: var(--dar-text);
   transition: all 0.3s ease-in-out;
+  opacity: 0.5;
   cursor: pointer;
+  margin: 4px;
+  position: relative;
 }
-.out-container .dar-carousel-dots .dots-wrapper .dot-item:hover {
-  background-color: #252b3a;
-  transition: all 0.3s ease-in-out;
+.out-container .dar-carousel-dot::after {
+  content: ' ';
+  position: absolute;
+  inset: -4px;
 }
-.out-container .dar-carousel-dots .dots-wrapper .dot-item.active {
-  background-color: #252b3a;
+.out-container .dar-carousel-dot:hover {
+  opacity: 1;
+}
+.out-container .dar-carousel-dot.dar-carousel-dot-active {
+  opacity: 1;
   width: 24px;
-  transition: all 0.3s ease-in-out;
 }

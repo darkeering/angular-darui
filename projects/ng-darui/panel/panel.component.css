@@ -1,6 +1,7 @@
 :host ::ng-deep .header-container {
-  background-color: #f2f5fc;
+  background-color: var(--dar-panel-bg);
   padding: 12px 20px;
+  color: var(--dar-text);
 }
 :host ::ng-deep .header-container .darui-panel-header {
   display: flex;
@@ -15,7 +16,7 @@
   transform: rotate(180deg);
 }
 :host ::ng-deep .body-contsiner {
-  background-color: #f2f5fc;
+  background-color: var(--dar-panel-bg);
   display: flex;
   line-height: 1.5;
 }
@@ -25,8 +26,9 @@
   display: block;
 }
 :host ::ng-deep .body-contsiner .body-inner {
-  background-color: #fff;
+  background-color: var(--dar-base-bg);
   padding: 20px;
   flex: 1;
-  border-left: 2px solid #5e7ce0;
+  border-left: 2px solid var(--dar-primary);
+  color: var(--dar-text);
 }

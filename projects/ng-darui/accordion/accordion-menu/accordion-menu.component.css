@@ -6,9 +6,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
 }
 .accordion-menu:hover {
-  background-color: #f2f2f3;
+  background-color: var(--dar-list-item-hover-bg);
 }
 .accordion-menu .dar-acc-menu-icon {
   font-size: 16px;

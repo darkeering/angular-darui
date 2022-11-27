@@ -83,6 +83,7 @@
             ],
             "styles": [
               "projects/demo-test/src/styles.less",
+              "projects/ng-darui/style-sheet.css",
               "projects/ng-darui/style.css"
             ],
             "scripts": []

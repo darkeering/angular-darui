@@ -11,14 +11,19 @@
   cursor: pointer;
 }
 .primary {
-  background-color: #5e7ce0;
+  background-color: var(--dar-primary);
   color: #fff;
   transition: background-color 0.3s;
 }
 .primary:hover {
-  background-color: #7693f5;
+  background-color: var(--dar-primary-5);
+}
+.primary:active {
+  background-color: var(--dar-primary-7);
 }
 .primary:disabled {
-  background-color: #beccfa;
+  border: 1px solid var(--dar-disabled-border);
+  background-color: var(--dar-disabled-bg);
+  color: var(--dar-disabled-color);
   cursor: not-allowed;
 }

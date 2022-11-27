@@ -1,9 +1,9 @@
 <div class="out-container">
-  <div class="pre button" (click)="pre()">
-    <i zLeftOutlined class="darui-icon"></i>
+  <div class="dar-carousel-quick dar-carousel-pre" (click)="pre()">
+    <i zLeftOutlined class="dar-carousel-pre-icon"></i>
   </div>
-  <div class="next button" (click)="next()">
-    <i zRightOutlined class="darui-icon"></i>
+  <div class="dar-carousel-quick dar-carousel-next" (click)="next()">
+    <i zRightOutlined class="dar-carousel-next-icon"></i>
   </div>
 
   <div class="dar-carousel-container">
@@ -15,8 +15,8 @@
   <div class="dar-carousel-dots">
     <ul class="dots-wrapper" *ngIf="items.length > 0">
       <li
-        class="dot-item"
-        [ngClass]="{ active: activeIndex === index }"
+        class="dar-carousel-dot"
+        [ngClass]="{ 'dar-carousel-dot-active': activeIndex === index }"
         *ngFor="let item of items; let index = index"
         (click)="switchStep(index)"
       ></li>

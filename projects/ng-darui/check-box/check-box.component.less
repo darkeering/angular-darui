@@ -6,6 +6,7 @@
     line-height: 1;
     height: 16px;
     cursor: pointer;
+    color: var(--dar-text);
 
     input {
       width: 0;
@@ -14,40 +15,30 @@
 
     .darui-checkbox-material {
       font-size: 16px;
-      border: 1px solid #d7d8da;
+      border: 1px solid var(--dar-form-control-line);
       border-radius: 4px;
       box-sizing: content-box;
       margin-right: 6px;
-      background-color: #fff;
+      background-color: var(--dar-base-bg);
       color: #fff;
       background: linear-gradient(#5e7ce0, #5e7ce0) no-repeat center/0%;
       background-size: 0% 0%;
-      transition: background-size 0.2s cubic-bezier(.5, .05, .5, .95);
-
+      transition: all 0.2s cubic-bezier(.5, .05, .5, .95);
+      i {
+        font-size: 16px;
+        opacity: 0;
+        transition: all 0.2s cubic-bezier(.5, .05, .5, .95);
+      }
     }
   }
 
-  .darui-checkbox-tick {
-    transform: scale(0);
-    opacity: 0;
-    transition: 0.2s ease-in-out;
-
-    .darui-tick {
-      fill: #fff;
-    }
-  }
-
-  &.active {
-    .darui-checkbox-tick {
-      transform: scale(1);
-      opacity: 1;
-    }
-
+  &.checked {
     .darui-checkbox-label {
-
       .darui-checkbox-material {
         background-size: 100% 100%;
-        transition: background-size 0.2s cubic-bezier(.5, .05, .5, .95);
+        i {
+          opacity: 1;
+        }
       }
     }
 
