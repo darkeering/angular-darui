@@ -1,4 +1,3 @@
-.content {
-  width: 100%;
-  background-color: var(--dar-global-bg);
+:host {
+  height: 100%;
 }

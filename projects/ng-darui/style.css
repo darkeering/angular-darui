@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/cdk/overlay-prebuilt.css';
-@import '~@devui-design/icons/icomoon/devui-icon.css';
+@import "~@angular/cdk/overlay-prebuilt.css";
+@import "~@devui-design/icons/icomoon/devui-icon.css";
 *,
 body,
 html {
@@ -11,6 +11,12 @@ html {
   font-family: inherit;
   box-sizing: border-box;
   font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+body,
+html {
+  height: 100%;
+  background-color: var(--dar-global-bg);
+  color: var(--dar-text);
 }
 ul {
   list-style: none;

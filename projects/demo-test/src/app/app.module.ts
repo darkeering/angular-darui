@@ -38,7 +38,27 @@ import { DropDownDemoComponent } from './components/drop-down-demo/drop-down-dem
 import { DrawerDemoComponent } from './components/drawer-demo/drawer-demo.component';
 import { TableDemoComponent } from './components/table-demo/table-demo.component';
 import { TemComponent } from './components/table-demo/tem/tem.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { IconsDemoComponent } from './components/icons-demo/icons-demo.component';
+const routes: Routes = [
+  { path: 'button', component: ButtonComponent },
+  { path: 'autoComplete', component: AutoCompleteComponent },
+  { path: 'carousel', component: CarouselDemoComponent },
+  { path: 'checkbox', component: CheckBoxDemoComponent },
+  { path: 'dragDrop', component: DragDropDemoComponent },
+  { path: 'drawer', component: DrawerDemoComponent },
+  { path: 'dropDown', component: DropDownDemoComponent },
+  { path: 'fullScreen', component: FullScreenDemoComponent },
+  { path: 'panel', component: PanelDemoComponent },
+  { path: 'search', component: SearchDemoComponent },
+  { path: 'tags', component: TagsDemoComponent },
+  { path: 'tooltip', component: TooltipDemoComponent },
+  { path: 'icons', component: IconsDemoComponent },
+  { path: 'tagsInput', component: TagsInputDemoComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,10 +77,13 @@ import { TemComponent } from './components/table-demo/tem/tem.component';
     DropDownDemoComponent,
     DrawerDemoComponent,
     TableDemoComponent,
-    TemComponent
+    TemComponent,
+    HomeComponent,
+    IconsDemoComponent
   ],
   imports: [
     FormsModule,
+    RouterModule.forRoot(routes),
     BrowserModule,
     ButtonModule,
     TooltipModule,

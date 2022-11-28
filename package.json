@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "cbuild": "ng build ng-darui && cp projects/ng-darui/style.css dist/ng-darui"
+    "cbuild": "ng build ng-darui && cp projects/ng-darui/style.css dist/ng-darui && cp projects/ng-darui/style-sheet.css dist/ng-darui"
   },
   "private": false,
   "dependencies": {
