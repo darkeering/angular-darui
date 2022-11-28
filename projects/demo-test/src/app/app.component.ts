@@ -31,7 +31,7 @@ export class AppComponent {
     this.route.url.subscribe(() => {
       console.log(111);
       console.log('location.pathname', location.pathname);
-      const ac = location.pathname.split('/')[2]
+      const ac = location.pathname.split('/')[1]
       console.log(ac);
       if (ac) {
         this.menu.forEach((i: any) => {
