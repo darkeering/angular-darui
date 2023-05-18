@@ -25,6 +25,7 @@ export class AppComponent {
     { title: 'Tooltip', key: 'tooltip' },
     { title: 'Tags Input', key: 'tagsInput' },
     { title: 'Icons', key: 'icons' },
+    { title: 'Form', key: 'form' },
   ];
 
   constructor(private router: Router, private route: ActivatedRoute) {

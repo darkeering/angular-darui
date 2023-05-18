@@ -1,0 +1,38 @@
+<form [formGroup]="profileForm">
+  <label for="first-name">First Name: </label>
+  <input zTextInput id="first-name" type="text" formControlName="firstName" />
+  <ng-container *ngIf="profileForm.get('firstName') as firstName">
+    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert">
+      <div *ngIf="firstName.errors?.['required']">Name is required.</div>
+    </div>
+  </ng-container>
+
+  <label for="last-name">Last Name: </label>
+  <input zTextInput id="last-name" type="text" formControlName="lastName" />
+
+  <div formGroupName="address">
+    <h2>Address</h2>
+
+    <label for="Country">Country: </label>
+    <input zTextInput id="country" type="text" formControlName="country" />
+
+    <label for="city">City: </label>
+    <input zTextInput id="city" type="text" formControlName="city" />
+
+    <label for="street">Street: </label>
+    <input zTextInput id="street" type="text" formControlName="street" />
+  </div>
+
+  <div formArrayName="aliases">
+    <h2>Aliases</h2>
+    <z-button type="button" (click)="addAlias()">+ Add another alias</z-button>
+
+    <div *ngFor="let alias of aliases.controls; let i = index">
+      <label for="alias-{{ i }}">Alias:</label>
+      <input zTextInput id="alias-{{ i }}" type="text" [formControlName]="i" />
+    </div>
+  </div>
+</form>
+
+<p>Form value: {{ profileForm.value | json }}</p>
+<p>Form Status: {{ profileForm.status }}</p>

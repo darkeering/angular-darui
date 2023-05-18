@@ -10,7 +10,7 @@ import { TooltipDemoComponent } from './components/tooltip-demo/tooltip-demo.com
 import { PanelDemoComponent } from './components/panel-demo/panel-demo.component';
 import { SearchDemoComponent } from './components/search-demo/search-demo.component';
 import { CheckBoxDemoComponent } from './components/check-box-demo/check-box-demo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselDemoComponent } from './components/carousel-demo/carousel-demo.component';
 import { TagsDemoComponent } from './components/tags-demo/tags-demo.component';
 import {
@@ -41,6 +41,7 @@ import { TemComponent } from './components/table-demo/tem/tem.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { IconsDemoComponent } from './components/icons-demo/icons-demo.component';
+import { FormComponent } from './components/form/form.component';
 const routes: Routes = [
   { path: 'button', component: ButtonComponent },
   { path: 'autoComplete', component: AutoCompleteComponent },
@@ -56,6 +57,7 @@ const routes: Routes = [
   { path: 'tooltip', component: TooltipDemoComponent },
   { path: 'icons', component: IconsDemoComponent },
   { path: 'tagsInput', component: TagsInputDemoComponent },
+  { path: 'form', component: FormComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];
@@ -79,10 +81,12 @@ const routes: Routes = [
     TableDemoComponent,
     TemComponent,
     HomeComponent,
-    IconsDemoComponent
+    IconsDemoComponent,
+    FormComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     BrowserModule,
     ButtonModule,
